@@ -1,0 +1,74 @@
+# =========================================
+#   Avícola Rior — robots.txt
+#   https://avicolarior.com
+# =========================================
+
+# Crawlers tradicionales
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# IA — OpenAI
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# IA — Anthropic
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# IA — Google
+User-agent: Google-Extended
+Allow: /
+
+# IA — Meta
+User-agent: FacebookBot
+Allow: /
+
+# IA — Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# IA — Amazon
+User-agent: Amazonbot
+Allow: /
+
+# IA — Apple
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# IA — Common Crawl (base de datos usada por múltiples modelos)
+User-agent: CCBot
+Allow: /
+
+# IA — Cohere
+User-agent: cohere-ai
+Allow: /
+
+# IA — Diffbot
+User-agent: Diffbot
+Allow: /
+
+# =========================================
+Sitemap: https://avicolarior.com/sitemap.xml
+LLMs: https://avicolarior.com/llms.txt
+# =========================================

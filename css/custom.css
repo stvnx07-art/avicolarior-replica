@@ -27,8 +27,41 @@
 }
 
 /* Fix horizontal scroll caused by wave trick */
-body {
+html, body {
   overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Bulletproof horizontal clipping for the sections containing the wide waves */
+.egg, footer {
+  overflow-x: hidden;
+}
+
+/* Mobile-specific enhancements for wave animations */
+@media (max-width: 768px) {
+  @keyframes waveFlowTopMobile {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(50vw); }
+  }
+
+  @keyframes waveFlowBottomMobile {
+    0% { transform: rotate(180deg) translateX(0); }
+    100% { transform: rotate(180deg) translateX(50vw); }
+  }
+
+  .egg > img[aria-hidden="true"]:not(.rotate-180) {
+    width: 200vw !important;
+    max-width: 200vw !important;
+    margin-left: -50vw !important;
+    animation: waveFlowTopMobile 8s ease-in-out infinite alternate;
+  }
+
+  .egg > img.rotate-180, footer > img.rotate-180 {
+    width: 200vw !important;
+    max-width: 200vw !important;
+    margin-left: -50vw !important;
+    animation: waveFlowBottomMobile 8s ease-in-out infinite alternate;
+  }
 }
 
 /* Wave Morphing Animations */
